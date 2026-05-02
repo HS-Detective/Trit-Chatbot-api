@@ -1,0 +1,12 @@
+id: faq
+name: FAQ Chatbot
+models:
+  llm: gpt-3.5-turbo
+  embedding: text-embedding-3-large
+retriever:
+  k: 4
+paths:
+  chroma_dir: features/faq/chromadb        # ▶ 네 기존 PERSIST_DIRECTORY를 이 경로로
+  system_prompt: features/faq/prompts/system.txt
+  datasets_dir: features/faq/datasets
+collection_name: FAQ

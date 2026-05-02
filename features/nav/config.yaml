@@ -1,0 +1,14 @@
+id: nav
+name: Navigation Guide Chatbot
+bot_class: features.nav.chatbot.NavChatBot
+models:
+  llm: gpt-4o
+  embedding: text-embedding-3-small
+retriever:
+  k: 3
+paths:
+  chroma_dir: features/nav/chromadb/chroma_db_500_50
+  system_prompt: features/nav/prompts/system.txt
+  document_prompt: features/nav/prompts/document.txt
+  datasets_csv: features/nav/datasets/menu_description_qa.csv
+collection_name: nav_menu_qa

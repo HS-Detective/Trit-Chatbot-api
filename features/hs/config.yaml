@@ -1,0 +1,35 @@
+id: hs
+name: HS Code Expert Chatbot
+bot_class: features.hs.chatbot.HSChatBot
+
+models:
+  llm: gpt-4o
+  embedding: text-embedding-3-large
+  embedding_dimensions: 3072
+
+retriever:
+  search_type: "similarity"
+  k: 7
+
+text_splitter:
+  chunk_size: 2000
+  chunk_overlap: 200
+  separators: ["\n\n", "\n", ". ", " "]
+
+llm_params:
+  pd_temperature: 0.1
+  hs_temperature: 0
+  max_tokens: 3000
+  request_timeout: 500
+
+paths:
+  chroma_dir: features/hs/chromadb
+  datasets_csv: features/hs/datasets/HS_0.csv
+  pd_user_prompt: features/hs/prompts/pd_user.txt
+  pd_system_prompt_prod: features/hs/prompts/pd_system_prod.txt
+  pd_system_prompt_eval: features/hs/prompts/pd_system_eval.txt
+  system_prompt_prod: features/hs/prompts/hs_system_prod.txt
+  system_prompt_eval: features/hs/prompts/hs_system_eval.txt
+  system_prompt: features/hs/prompts/hs_system_prod.txt
+
+collection_name: HS_33_explanation_1000_100_large_1024_source

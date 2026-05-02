@@ -1,0 +1,26 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pyyaml
+pandas
+numpy
+pymysql
+bs4
+pillow # import 할 땐 PIL
+
+# 버전 설정 
+langchain<0.3
+langchain-core<0.3
+langchain-community<0.3
+langchain-openai
+langchain-chroma
+langchain-text-splitters
+chromadb
+
+pydantic
+pypdf
+
+# For evaluation (optional)
+# ragas
+# pytest
+# pytest-mock

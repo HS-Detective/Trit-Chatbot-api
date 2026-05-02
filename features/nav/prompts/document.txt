@@ -1,0 +1,4 @@
+- 메뉴 경로: {menu_path}
+- URL: {url}
+- 로그인: {login_required}
+- 설명: {page_content}
