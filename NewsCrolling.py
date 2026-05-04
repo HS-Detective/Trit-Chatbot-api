@@ -24,7 +24,7 @@ print("MYSQL_DB:", os.getenv("MYSQL_DB"))
 #  DB 연결 설정
 DB = dict(
     host=os.getenv("MYSQL_HOST"),
-    port=os.getenv("MYSQL_PORT"),
+    port=int(os.getenv("MYSQL_PORT")),
     user=os.getenv("MYSQL_USER"),
     password=os.getenv("MYSQL_PW"),
     db=os.getenv("MYSQL_DB"),
