@@ -1,6 +1,6 @@
 # Trit - AI 기반 무역 인사이트 및 챗봇 웹 서비스 🌐
 
-![Trit Logo](src/main/resources/static/images/Trit_logo.png)
+![Trit Logo](./Trit_logo.png)
 
 ## 📌 프로젝트 개요
 **Trit (AI 기반 무역 인사이트 및 챗봇 웹 서비스)**의 핵심 두뇌 역할을 하는 **AI 코어 파이썬 서버**입니다.
