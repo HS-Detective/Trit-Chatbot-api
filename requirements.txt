@@ -6,9 +6,9 @@ pandas
 numpy
 pymysql
 bs4
-pillow
+pillow # import 할 땐 PIL
 
-# Version settings
+# 버전 설정 
 langchain<0.3
 langchain-core<0.3
 langchain-community<0.3
