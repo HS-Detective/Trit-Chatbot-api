@@ -1,14 +1,14 @@
-# Trit - AI 기반 무역 인사이트 및 챗봇 웹 서비스 🌐
+# Trit - AI 기반 무역 인사이트 및 챗봇 웹 서비스 
 
 ![Trit Logo](./Trit_logo.png)
 
-## 📌 프로젝트 개요
+## 프로젝트 개요
 **Trit (AI 기반 무역 인사이트 및 챗봇 웹 서비스)**의 핵심 두뇌 역할을 하는 **AI 코어 파이썬 서버**입니다.
 이 프로젝트는 메인 웹 서비스(Java/Spring Boot)를 보조하여, 무역 관련 질의응답(FAQ, 용어 사전, HS 코드, 내비게이션 등)을 처리하기 위한 맞춤형 RAG(Retrieval-Augmented Generation) 챗봇 모델 서빙 및 AI 데이터 처리 기능을 전담합니다. 
 
 사용자의 복잡한 질문에 대해 LLM 프롬프트 처리와 정교한 답변 생성을 담당하며, 데이터 예측(Predict) 모델 서빙 및 향후 n8n 워크플로우와의 연동을 통해 더욱 확장된 AI 파이프라인을 구축하는 것을 목표로 합니다. 메인 서버와는 역할을 분리하여 유연하고 확장 가능한 마이크로서비스 아키텍처의 한 축을 담당합니다.
 
-## 🚀 주요 기능
+## 주요 기능
 - **도메인별 다중 RAG 챗봇 모델 서빙 (`features` 기반 동적 로딩)**
   - `FAQ`: 무역 통관, 관세 등 자주 묻는 질문에 대한 AI 응답
   - `Glossary (tradeWords)`: 방대한 무역 전문 용어 사전 기반 검색 및 해설
@@ -22,7 +22,7 @@
   - 도메인별 시스템 프롬프트 및 문서 프롬프트 템플릿의 동적 관리
   - n8n 워크플로우를 통한 외부 API 및 데이터 전처리 파이프라인 통합 지원
 
-## 🛠 기술 스택
+## 기술 스택
 ### Backend & Framework
 - **Language**: Python 3
 - **Web Framework**: FastAPI (비동기 처리 및 빠른 API 개발)
@@ -38,7 +38,7 @@
 - **Data Validation & Settings**: Pydantic, python-dotenv, PyYAML
 - **Database Connection**: PyMySQL
 
-## 📁 프로젝트 폴더 구조
+## 프로젝트 폴더 구조
 ```text
 C:\diane\chat\
 ├── core/                  # 핵심 AI 로직 및 공통 유틸리티
@@ -60,7 +60,7 @@ C:\diane\chat\
 └── requirements.txt       # 프로젝트 패키지 의존성 목록
 ```
 
-## ⚙️ 설정 및 실행 방법
+## 설정 및 실행 방법
 
 ### 1. 가상환경 설정 및 활성화
 안전한 패키지 관리를 위해 가상환경 생성을 권장합니다.
@@ -98,7 +98,7 @@ uvicorn app:app --host 0.0.0.0 --port 8001 --reload
 python main.py
 ```
 
-## 🤝 메인 서버(Spring Boot)와의 연동 아키텍처 안내
+## 메인 서버(Spring Boot)와의 연동 아키텍처 안내
 
 본 파이썬 AI 코어 서버는 **8001번 포트**에서 동작하며, 메인 웹 서버(Java/Spring Boot)와 **RESTful API**를 통해 비동기적으로 통신합니다.
 
