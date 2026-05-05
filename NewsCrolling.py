@@ -1,7 +1,8 @@
 import os
+import re
+import hashlib
+import time
 from dotenv import load_dotenv
-import os, re, hashlib, time
-from datetime import datetime
 from email.utils import parsedate_to_datetime  # RFC822 날짜 파서
 import requests
 import pymysql
@@ -45,10 +46,6 @@ DEFAULT_THUMB = "/images/news/default.jpg"  # 기본 이미지 경로
 BASE = os.path.abspath(os.path.join(os.getcwd(), "..", "project"))
 STATIC_DIR = os.path.join(BASE, "src", "main", "resources", "static", "images", "news")
 PUBLIC_PREFIX = "/images/news"
-
-#  HTML 태그 제거
-def clean_html(s: str) -> str:
-    return re.sub("<.*?>", "", s or "").strip()
 
 #  날짜 변환: 네이버 pubDate → MySQL DATETIME
 def to_mysql_datetime(s: str) -> str | None:
