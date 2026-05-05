@@ -4,7 +4,6 @@ import shutil
 import pandas as pd
 import argparse
 from pathlib import Path
-import json
 from collections import defaultdict
 
 from langchain_core.documents import Document
@@ -129,7 +128,7 @@ def build_database(chunk_size: int, chunk_overlap: int):
         batch_ids = ids[i:i+batch_size]
         
         print(f"{i // batch_size + 1}번째 배치 저장 중... ({len(batch_chunks)}개 청크)")
-        db = Chroma.from_documents(
+        Chroma.from_documents(
             documents=batch_chunks,
             embedding=embedding,
             persist_directory=CHROMA_DIR,
